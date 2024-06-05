@@ -30,6 +30,9 @@ const appendChild = (parentInstance, child) => {
 };
 
 const createRenderer = ({ onChange = () => {} }) => {
+  console.log('-------------------------------------------------------------');
+  console.log('-------------------------------------------------------------');
+  console.log('-------------------------------------------------------------');
   return ReactFiberReconciler({
     schedulePassiveEffects: scheduler.unstable_scheduleCallback,
     cancelPassiveEffects: scheduler.unstable_cancelCallback,

@@ -31,5 +31,6 @@ export default defineConfig({
     include: ['tests/*.{test,spec}.?(c|m)[jt]s?(x)'],
     exclude: [...defaultExclude, 'tests/{components,dom,usePDF}.test.*'],
     watch: false,
+    disableConsoleIntercept: false,
   },
 });

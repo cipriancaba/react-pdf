@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   test: {
     watch: false,
+    disableConsoleIntercept: false,
     poolOptions: {
       threads: {
         isolate: false,

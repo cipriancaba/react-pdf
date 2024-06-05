@@ -25,6 +25,7 @@ const pdf = (initialValue) => {
 
   const container = { type: 'ROOT', document: null };
   renderer = renderer || createRenderer({ onChange });
+  console.log(renderer);
   const mountNode = renderer.createContainer(container);
 
   const updateContainer = (doc, callback) => {
@@ -84,11 +85,8 @@ const pdf = (initialValue) => {
 
   // TODO: rename this method to `toStream` in next major release, because it return stream not a buffer
   const toBuffer = async () => {
-    const {
-      layout: _INTERNAL__LAYOUT__DATA_,
-      fileStream,
-    } = await render();
-    callOnRender({_INTERNAL__LAYOUT__DATA_});
+    const { layout: _INTERNAL__LAYOUT__DATA_, fileStream } = await render();
+    callOnRender({ _INTERNAL__LAYOUT__DATA_ });
 
     return fileStream;
   };
